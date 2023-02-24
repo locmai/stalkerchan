@@ -8,6 +8,5 @@
 
 ### Checklist
 <!-- [Place an '[x]' (no spaces) in all applicable fields. Please remove unrelated fields.] -->
-- [ ] Chart Version bumped
-- [ ] README.md was updated with readme-generator
+- [ ] README.md was updated
 - [ ] CHANGELOG.md was updated
