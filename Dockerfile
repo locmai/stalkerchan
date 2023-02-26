@@ -19,14 +19,6 @@ RUN --mount=type=cache,target=/app/target \
 # stage two - we'll utilize a second container to run our built binary from our first container - slim containers!
 FROM debian:11.6-slim as deploy
 
-RUN set -eux; \
-    export DEBIAN_FRONTEND=noninteractive; \
-    apt update; \
-    apt install --yes --no-install-recommends bind9-dnsutils iputils-ping iproute2 curl ca-certificates htop; \
-    apt clean autoclean; \
-    apt autoremove --yes; \
-    rm -rf /var/lib/{apt,dpkg,cache,log}/;
-
 WORKDIR /deploy
 
 COPY --from=build /app/stalkerchan ./
