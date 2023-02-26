@@ -24,7 +24,7 @@ pub enum Error {
     Forbidden,
 
     /// Return `404 Not Found`
-    #[error("request path not found")]
+    #[error("request entity/path not found")]
     NotFound,
 
     /// Return `422 Unprocessable Entity`
