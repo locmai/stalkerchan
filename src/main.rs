@@ -10,13 +10,14 @@ use std::path::Path;
 
 #[tokio::main]
 async fn main() {
-
     let settings = Config::builder()
         .add_source(File::from(Path::new("config.yaml")))
         .build()
-        .unwrap().try_deserialize::<HashMap<String, String>>().expect("Invalid configuration");
-    
-        // TODO: make a parser instead
+        .unwrap()
+        .try_deserialize::<HashMap<String, String>>()
+        .expect("Invalid configuration");
+
+    // TODO: make a parser instead
     println!("{}", settings.get("rust_log").unwrap());
 
     tracing_subscriber::registry()
