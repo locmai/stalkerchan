@@ -44,10 +44,10 @@ async fn get_source(
     for source in sources.iter() {
         if source.group_id == group_id {
             tracing::debug!("Found group_id {}", group_id);
+            return Ok(Json(SourceBody {
+                source: source.clone(),
+            }));
         }
-        return Ok(Json(SourceBody {
-            source: source.clone(),
-        }));
     }
 
     tracing::debug!("Target source not found with group_id {}", group_id);
