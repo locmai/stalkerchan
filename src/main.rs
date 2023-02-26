@@ -29,7 +29,7 @@ async fn main() {
 
     let app = core::default_router().layer(TraceLayer::new_for_http());
 
-    let addr = SocketAddr::from(([127, 0, 0, 1], 8000));
+    let addr = SocketAddr::from(([0, 0, 0, 0], 8000));
 
     tracing::debug!("listening on {}", addr);
     axum::Server::bind(&addr)
