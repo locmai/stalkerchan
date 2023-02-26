@@ -1,3 +1,0 @@
-server_port: 8000
-database_url: "sqlite"
-rust_log: "stalkerchan=debug,tower_http=debug"
