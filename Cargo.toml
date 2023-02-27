@@ -10,7 +10,7 @@ authors = [
 
 [dependencies]
 anyhow = "1.0.69"
-axum = { version = "0.6.7", features = ["tower-log"] }
+axum = { version = "0.6.8", features = ["tower-log"] }
 axum-macros = "0.3.4"
 config = "0.13.3"
 metrics = "0.20.1"
@@ -21,6 +21,6 @@ sqlx = { version = "0.6.2", features = ["runtime-tokio-native-tls", "postgres", 
 thiserror = "1.0.38"
 tokio = { version = "1.25.0", features = ["full"] }
 tower = "0.4.13"
-tower-http = { version = "0.3.5", features = ["trace"] }
+tower-http = { version = "0.4.0", features = ["trace"] }
 tracing = "0.1.37"
 tracing-subscriber = { version = "0.3.16", features = ["env-filter"] }
